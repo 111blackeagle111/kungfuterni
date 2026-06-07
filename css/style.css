@@ -1,0 +1,424 @@
+/* Kung Fu Terni - stile principale */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500;600&display=swap');
+
+:root {
+  --bg: #111111;
+  --bg-alt: #1b1b1b;
+  --panel: #222222;
+  --red: #ec3642;
+  --gold: #ffffff;
+  --text: #ececec;
+  --muted: #aaaaaa;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { background: #050505; }
+
+body {
+  max-width: 1366px;
+  margin: 0 auto;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4 {
+  font-family: Anton, "Arial Narrow", Impact, sans-serif;
+  font-weight: 400;
+  letter-spacing: .06em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; color: var(--gold); margin-bottom: .8em; text-transform: uppercase; }
+h3 { font-size: 1.15rem; color: var(--gold); margin: 1.2em 0 .5em; }
+
+a { color: var(--gold); }
+a:hover { color: #fff; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* ---------- header ---------- */
+header {
+  background: #000;
+  border-bottom: 3px solid var(--red);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: .6rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.header-social { display: flex; gap: 1rem; align-items: center; }
+.header-social img { width: 22px; height: 22px; }
+@media (max-width: 960px) { .header-social { display: none; } }
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  text-decoration: none;
+}
+
+.brand img { width: 52px; height: 52px; object-fit: contain; }
+
+.brand span {
+  font-family: Anton, "Arial Narrow", sans-serif;
+  font-size: 1.05rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  white-space: nowrap;
+}
+
+#nav-toggle { display: none; }
+
+.nav-btn {
+  display: none;
+  color: var(--gold);
+  font-size: 1.8rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+
+nav a {
+  display: block;
+  padding: .85rem .55rem;
+  color: #fff;
+  text-decoration: none;
+  font-family: Anton, "Arial Narrow", Impact, sans-serif;
+  font-size: .95rem;
+  text-transform: none;
+  letter-spacing: .03em;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover { color: #fff; border-bottom-color: var(--red); }
+nav a.active { color: var(--red); }
+
+@media (max-width: 960px) {
+  .nav-btn { display: block; }
+  nav { width: 100%; display: none; }
+  #nav-toggle:checked ~ nav { display: block; }
+  .header-inner { flex-wrap: wrap; }
+  nav ul { flex-direction: column; }
+  nav a { font-size: 1rem; padding: .7rem .4rem; border-bottom: 1px solid #222; }
+}
+
+/* ---------- hero ---------- */
+.hero {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.8)), url("../assets/img/hero.jpg") center/cover no-repeat;
+  padding: 3rem 1rem;
+}
+
+.hero-content img { width: 170px; margin: 0 auto 1.2rem; }
+
+.hero h1 { color: #fff; text-transform: uppercase; margin-bottom: .4em; }
+
+.hero p.sub { color: var(--gold); font-size: 1.1rem; text-transform: uppercase; letter-spacing: .1em; }
+
+.hero .actions { margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+.btn {
+  display: inline-block;
+  padding: .7rem 1.6rem;
+  background: var(--red);
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .05em;
+  border-radius: 3px;
+}
+
+.btn:hover { background: #e2293f; color: #fff; }
+
+.btn.ghost { background: transparent; border: 2px solid var(--gold); color: var(--gold); }
+.btn.ghost:hover { background: var(--gold); color: #000; }
+
+/* ---------- layout ---------- */
+main { max-width: 1100px; margin: 0 auto; padding: 2.5rem 1rem; }
+
+section { margin-bottom: 3rem; }
+
+.cols { display: flex; gap: 2rem; flex-wrap: wrap; align-items: flex-start; }
+.cols > div { flex: 1 1 300px; }
+
+.panel {
+  background: var(--panel);
+  border-left: 4px solid var(--red);
+  padding: 1.4rem 1.6rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--bg-alt);
+  border-radius: 6px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid #2c2c2c;
+  transition: transform .15s ease;
+}
+
+.card:hover { transform: translateY(-4px); color: var(--text); }
+
+.card img { width: 100%; height: auto; }
+
+/* card persona (staff): formato ritratto uniforme, senza distorsioni */
+.card.person img { aspect-ratio: 3 / 4; object-fit: cover; object-position: top; background: #000; }
+
+.card .card-body { padding: 1rem 1.2rem; }
+
+.card h3 { margin: 0 0 .4em; }
+
+figure.framed { border: 1px solid #2c2c2c; border-radius: 6px; overflow: hidden; background: var(--bg-alt); }
+figure.framed figcaption { padding: .5rem .8rem; font-size: .85rem; color: var(--muted); }
+
+blockquote.motto {
+  font-style: italic;
+  font-size: 1.05rem;
+  border-left: 4px solid var(--gold);
+  padding: 1rem 1.5rem;
+  background: var(--bg-alt);
+  border-radius: 0 6px 6px 0;
+}
+
+blockquote.motto footer { margin-top: .8rem; color: var(--gold); font-style: normal; font-weight: 600; }
+
+ul.clean { list-style: none; }
+ul.clean li { padding: .3rem 0 .3rem 1.2rem; position: relative; }
+ul.clean li::before { content: "\300B"; color: var(--red); position: absolute; left: 0; }
+
+/* galleria a colonne: preserva le proporzioni originali delle immagini */
+.gallery { columns: 3 240px; column-gap: 1rem; }
+.gallery img { width: 100%; height: auto; border-radius: 4px; margin-bottom: 1rem; break-inside: avoid; }
+
+.pdf-link {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  background: var(--bg-alt);
+  border: 1px solid #2c2c2c;
+  padding: .8rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-bottom: .6rem;
+}
+
+.pdf-link::before { content: "\1F4C4"; }
+
+/* media gallery: tile testuale che rivela l'immagine al passaggio del mouse (come l'originale Wix) */
+.tile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  background: var(--bg-alt);
+  border: 1px solid #2c2c2c;
+  border-radius: 6px;
+  overflow: hidden;
+  text-decoration: none;
+}
+.tile img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+.tile:hover img, .tile:focus img { opacity: 1; }
+.tile span {
+  position: relative;
+  z-index: 1;
+  font-family: Cinzel, serif;
+  font-size: 1.25rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  text-align: center;
+  padding: 0 1rem;
+}
+.tile:hover span, .tile:focus span { color: #fff; text-shadow: 0 2px 8px #000; }
+
+/* ---------- contatti / footer ---------- */
+.contact-box { background: var(--bg-alt); padding: 1.5rem; border-radius: 6px; border-top: 3px solid var(--red); }
+.contact-box p { margin-bottom: .35rem; }
+
+footer.site {
+  background: #000;
+  border-top: 3px solid var(--red);
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+footer.site .social { margin-bottom: 1rem; display: flex; gap: 1.2rem; justify-content: center; }
+
+footer.site .social a { font-size: 1rem; text-transform: uppercase; letter-spacing: .05em; text-decoration: none; }
+
+.page-title {
+  background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.85)), url("../assets/img/hero.jpg") center/cover no-repeat;
+  padding: 3.5rem 1rem;
+  text-align: center;
+}
+
+.page-title h1 { color: #fff; text-transform: uppercase; }
+
+table { border-collapse: collapse; width: 100%; }
+table td, table th { border: 1px solid #333; padding: .5rem .8rem; }
+
+/* pallini di navigazione ancore (come Wix) */
+.dot-nav {
+  position: fixed;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  z-index: 90;
+}
+.dot-nav a {
+  width: 9px; height: 9px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background: transparent;
+  display: block;
+}
+.dot-nav a:hover, .dot-nav a.on { background: #fff; }
+@media (max-width: 960px) { .dot-nav { display: none; } }
+
+/* ============ HOME (layout originale Wix) ============ */
+.hero-home {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.55)), url("../assets/img/hero.jpg") center/cover no-repeat fixed;
+  padding: 6rem 1rem 4rem;
+}
+
+.hero-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.hero-grid .titolo { flex: 1 1 420px; }
+
+.hero-grid h1 {
+  color: #fff;
+  font-size: clamp(3rem, 7vw, 5.2rem);
+  line-height: 1.05;
+}
+
+.hero-grid .logo-big { flex: 0 1 300px; }
+.hero-grid .logo-big img { width: 100%; max-width: 300px; }
+
+.hero-grid .shifu-line { margin-top: 2.5rem; font-size: 1.25rem; color: #fff; }
+.hero-grid .shifu-line strong { font-weight: 700; }
+.hero-grid .palestra { margin-top: 1rem; font-weight: 700; color: #fff; letter-spacing: .02em; }
+.hero-grid .actions { margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* sezioni maestri 50/50 */
+.split { display: flex; flex-wrap: wrap; background: var(--bg-alt); }
+.split > .foto { flex: 1 1 420px; min-height: 420px; background-size: cover; background-position: center top; }
+.split > .testo { flex: 1 1 420px; padding: 4rem 3rem; display: flex; flex-direction: column; justify-content: center; }
+.eyebrow { letter-spacing: .35em; font-size: .85rem; color: #fff; text-transform: uppercase; margin-bottom: .4rem; }
+.split h2 { font-size: 2.6rem; color: #fff; margin-bottom: 1rem; }
+.split p { text-align: justify; }
+
+/* discipline: banner impilati e centrati */
+.discipline-stack { max-width: 620px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.2rem; }
+.discipline-stack a { position: relative; display: block; }
+.discipline-stack img { width: 100%; height: auto; display: block; }
+.discipline-stack span {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: Anton, sans-serif;
+  font-size: 1.8rem; color: #fff; letter-spacing: .08em;
+  text-shadow: 0 2px 10px rgba(0,0,0,.7);
+}
+.section-title { text-align: center; font-size: 2.4rem; color: #fff; margin-bottom: 2rem; }
+
+/* banda rossa motto */
+.band-red {
+  background: var(--red);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+.band-red .actions { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
+.btn.dark { background: #2a2a2a; color: #fff; }
+.btn.dark:hover { background: #000; }
+.band-red .video-box { position: relative; aspect-ratio: 16/9; background: #000; margin-bottom: 2rem; }
+.band-red .video-box iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.band-red h2 { color: #fff; font-size: 1.9rem; }
+.motto-script {
+  font-family: Caveat, cursive;
+  font-size: 1.7rem;
+  line-height: 1.5;
+  color: #fff;
+}
+.motto-script .firma { display: block; margin-top: 1.2rem; }
+
+/* contatti home */
+.contatti-grid { display: flex; gap: 2.5rem; flex-wrap: wrap; align-items: flex-start; }
+.contatti-grid .recapiti { flex: 1 1 320px; }
+.contatti-grid .recapiti h2 { letter-spacing: .25em; font-size: 1.6rem; color: #fff; }
+.contatti-grid .qr { flex: 0 1 260px; }
+.contatti-grid .qr img { width: 100%; background: #fff; }
+.map-box { margin-top: 2rem; }
+.map-box iframe { width: 100%; height: 380px; border: 0; }
+
+/* sponsor */
+.sponsor-box { text-align: center; margin-bottom: 2.5rem; }
+.sponsor-box h2 { font-size: 1.3rem; color: #fff; margin-bottom: 1rem; }
+.sponsor-box img { margin: 0 auto; background: #fff; padding: .8rem; max-width: 100%; }
+
+/* invito modulo */
+.invito { text-align: center; max-width: 700px; margin: 0 auto; }
+.invito .btn { border-radius: 999px; padding: .9rem 3rem; font-size: 1.05rem; }
