@@ -62,7 +62,7 @@ header {
 
 .header-social { display: flex; gap: 1rem; align-items: center; }
 .header-social img { width: 22px; height: 22px; }
-@media (max-width: 960px) { .header-social { display: none; } }
+@media (max-width: 1280px) { .header-social { display: none; } }
 
 .brand {
   display: flex;
@@ -82,7 +82,8 @@ header {
   white-space: nowrap;
 }
 
-#nav-toggle { display: none; }
+.nav-btn[hidden] { display: none; }
+.nav-btn:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
 
 .nav-btn {
   display: none;
@@ -90,6 +91,10 @@ header {
   font-size: 1.8rem;
   cursor: pointer;
   user-select: none;
+  background: transparent;
+  border: 0;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 nav ul {
@@ -115,10 +120,11 @@ nav a {
 nav a:hover { color: #fff; border-bottom-color: var(--red); }
 nav a.active { color: var(--red); }
 
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   .nav-btn { display: block; }
-  nav { width: 100%; display: none; }
-  #nav-toggle:checked ~ nav { display: block; }
+  header nav { width: 100%; max-height: calc(100dvh - 80px); overflow-y: auto; }
+  .nav-ready nav { display: none; }
+  .nav-ready nav.is-open { display: block; }
   .header-inner { flex-wrap: wrap; }
   nav ul { flex-direction: column; }
   nav a { font-size: 1rem; padding: .7rem .4rem; border-bottom: 1px solid #222; }
@@ -289,7 +295,7 @@ footer.site {
   font-size: .9rem;
 }
 
-footer.site .social { margin-bottom: 1rem; display: flex; gap: 1.2rem; justify-content: center; }
+footer.site .social { margin-bottom: 1rem; display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: center; }
 
 footer.site .social a { font-size: 1rem; text-transform: uppercase; letter-spacing: .05em; text-decoration: none; }
 
@@ -323,7 +329,7 @@ table td, table th { border: 1px solid #333; padding: .5rem .8rem; }
   display: block;
 }
 .dot-nav a:hover, .dot-nav a.on { background: #fff; }
-@media (max-width: 960px) { .dot-nav { display: none; } }
+@media (max-width: 1280px) { .dot-nav { display: none; } }
 
 /* ============ HOME (layout originale Wix) ============ */
 .hero-home {
@@ -422,3 +428,8 @@ table td, table th { border: 1px solid #333; padding: .5rem .8rem; }
 /* invito modulo */
 .invito { text-align: center; max-width: 700px; margin: 0 auto; }
 .invito .btn { border-radius: 999px; padding: .9rem 3rem; font-size: 1.05rem; }
+
+@media (max-width: 600px) {
+  .split > .testo { min-width: 0; padding: 2rem 1.25rem; }
+  .contatti-grid .recapiti { min-width: 0; overflow-wrap: anywhere; }
+}

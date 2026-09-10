@@ -9,14 +9,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<script src="js/navigation.js" defer></script>
 </head>
 <body>
 
 <header>
   <div class="header-inner">
-    <label class="nav-btn" for="nav-toggle">&#9776;</label>
-    <input type="checkbox" id="nav-toggle">
-    <nav>
+    <button class="nav-btn" type="button" aria-label="Apri menu" aria-expanded="false" aria-controls="main-nav" hidden>&#9776;</button>
+    <nav id="main-nav" aria-label="Navigazione principale">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="news-e-rassegna-stampa.html">News e Rassegna Stampa</a></li>
@@ -32,9 +32,9 @@
       </ul>
     </nav>
     <div class="header-social">
-      <a href="https://www.facebook.com/AccademiaArtiMarzialiShaolinKungFuTerniasd/" target="_blank" rel="noopener"><img src="assets/img/icon-facebook.png" alt="Facebook"></a>
-      <a href="https://www.youtube.com/channel/UC8kUAY4UlYKr8-_XBy2B8Iw" target="_blank" rel="noopener"><img src="assets/img/icon-youtube.png" alt="YouTube"></a>
-      <a href="https://www.instagram.com/kungfuterni/" target="_blank" rel="noopener"><img src="assets/img/icon-instagram.png" alt="Instagram"></a>
+      <a href="https://www.facebook.com/AccademiaArtiMarzialiShaolinKungFuTerniasd/" target="_blank" rel="noopener"><img src="assets/img/icon-facebook.png" alt="Facebook" width="200" height="200" decoding="async"></a>
+      <a href="https://www.youtube.com/channel/UC8kUAY4UlYKr8-_XBy2B8Iw" target="_blank" rel="noopener"><img src="assets/img/icon-youtube.png" alt="YouTube" width="200" height="200" decoding="async"></a>
+      <a href="https://www.instagram.com/kungfuterni/" target="_blank" rel="noopener"><img src="assets/img/icon-instagram.png" alt="Instagram" width="200" height="200" decoding="async"></a>
     </div>
   </div>
 </header>
@@ -47,7 +47,7 @@
   <h2>Collaborano con noi</h2>
   <div class="grid">
     <div class="card">
-      <img src="assets/img/collab-rossini.jpg" alt="Dr.ssa Daniela Rossini" style="aspect-ratio:16/9;object-fit:contain;background:#fff;padding:1rem">
+      <img src="assets/img/collab-rossini.jpg" alt="Dr.ssa Daniela Rossini" style="aspect-ratio:16/9;object-fit:contain;background:#fff;padding:1rem" width="283" height="242" decoding="async" loading="lazy">
       <div class="card-body">
         <h3>Dr.ssa Daniela Rossini</h3>
         <p>Fisioterapista &ndash; Operatrice olistica</p>
@@ -57,7 +57,7 @@
       </div>
     </div>
     <div class="card">
-      <img src="assets/img/collab-gobbi.png" alt="Dr. Francesco Gobbi" style="aspect-ratio:16/9;object-fit:contain;background:#fff;padding:1rem">
+      <img src="assets/img/collab-gobbi.png" alt="Dr. Francesco Gobbi" style="aspect-ratio:16/9;object-fit:contain;background:#fff;padding:1rem" width="1329" height="623" decoding="async" loading="lazy">
       <div class="card-body">
         <h3>Dr. Francesco Gobbi</h3>
         <p>Massofisioterapista &ndash; Osteopatia</p>
@@ -70,7 +70,7 @@
 
 <section>
   <h2>IOMIDIFENDO</h2>
-  <figure class="framed" style="max-width:380px;margin-bottom:1.5rem;background:#fff;padding:1rem"><img src="assets/img/iomidifendo.png" alt="Logo Io Mi Difendo"></figure>
+  <figure class="framed" style="max-width:380px;margin-bottom:1.5rem;background:#fff;padding:1rem"><img src="assets/img/iomidifendo.png" alt="Logo Io Mi Difendo" width="1588" height="299" decoding="async" loading="lazy"></figure>
   <p>L&rsquo;accademia &ldquo;Io Mi Difendo Sistema&rdquo; ideata dal maestro Ribello, ha come scopo la volont&agrave; di insegnare un sistema di AUTODIFESA LEGALE AL CAPSICUM che sia in grado di tutelare le persone sia dal punto di vista dell&rsquo;incolumit&agrave; fisica che dal lato delle possibili ripercussioni legali. Il maestro Ribello, nel dare vita al sistema di DIFESA PERSONALE ANTI-AGGRESSIONE e al suo programma di addestramento, ha individuato nelle PISTOLE AL CAPSICUM (&ldquo;pistole legali al peperoncino&rdquo;) gli strumenti ideali per L&rsquo;AUTODIFESA SENZA PORTO D&rsquo;ARMI. Si tratta infatti di dispositivi dotati di una capsula riempita con un gel ad alto potere urticante. Questo Corso di Difesa Personale va ben oltre lo Spray al Peperoncino: infatti imparerete a maneggiare un dispositivo in grado di bloccare un qualsiasi aggressore in brevissimo tempo, senza procurare danni permanenti e, cosa pi&ugrave; importante, assolutamente legale e non letale.</p>
   <p>Il maestro Luca Primavera &egrave; tecnico formatore della IO MI DIFENDO. Per informazioni e partecipazione ai corsi non esitate a contattarci ai nostri recapiti.</p>
   <p>Per ulteriori informazioni: <a href="http://www.iomidifendo.it" target="_blank" rel="noopener">www.iomidifendo.it</a></p>

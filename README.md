@@ -6,6 +6,8 @@ Sito statico ricostruito da https://www.kungfuterni.com/ (Wix). Hosting gratuito
 
 - Pagine HTML con gli **slug originali Wix** (`storia.html`, `gradi.html`, `copia-di-sanda.html`, ecc.) per preservare l'indicizzazione Google: GitHub Pages serve `/storia` da `storia.html` automaticamente.
 - `css/style.css` — unico foglio di stile.
+- `js/navigation.js` — menu accessibile su telefono e tablet; senza JavaScript i link restano visibili.
+- `assets/img/optimized/` — copie WebP leggere usate dalle pagine; gli originali restano in `assets/img/`.
 - `assets/img/`, `assets/pdf/` — riempiti da `scarica-assets.sh`.
 - `CNAME` — dominio custom per GitHub Pages.
 

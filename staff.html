@@ -9,14 +9,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<script src="js/navigation.js" defer></script>
 </head>
 <body>
 
 <header>
   <div class="header-inner">
-    <label class="nav-btn" for="nav-toggle">&#9776;</label>
-    <input type="checkbox" id="nav-toggle">
-    <nav>
+    <button class="nav-btn" type="button" aria-label="Apri menu" aria-expanded="false" aria-controls="main-nav" hidden>&#9776;</button>
+    <nav id="main-nav" aria-label="Navigazione principale">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="news-e-rassegna-stampa.html">News e Rassegna Stampa</a></li>
@@ -32,9 +32,9 @@
       </ul>
     </nav>
     <div class="header-social">
-      <a href="https://www.facebook.com/AccademiaArtiMarzialiShaolinKungFuTerniasd/" target="_blank" rel="noopener"><img src="assets/img/icon-facebook.png" alt="Facebook"></a>
-      <a href="https://www.youtube.com/channel/UC8kUAY4UlYKr8-_XBy2B8Iw" target="_blank" rel="noopener"><img src="assets/img/icon-youtube.png" alt="YouTube"></a>
-      <a href="https://www.instagram.com/kungfuterni/" target="_blank" rel="noopener"><img src="assets/img/icon-instagram.png" alt="Instagram"></a>
+      <a href="https://www.facebook.com/AccademiaArtiMarzialiShaolinKungFuTerniasd/" target="_blank" rel="noopener"><img src="assets/img/icon-facebook.png" alt="Facebook" width="200" height="200" decoding="async"></a>
+      <a href="https://www.youtube.com/channel/UC8kUAY4UlYKr8-_XBy2B8Iw" target="_blank" rel="noopener"><img src="assets/img/icon-youtube.png" alt="YouTube" width="200" height="200" decoding="async"></a>
+      <a href="https://www.instagram.com/kungfuterni/" target="_blank" rel="noopener"><img src="assets/img/icon-instagram.png" alt="Instagram" width="200" height="200" decoding="async"></a>
     </div>
   </div>
 </header>
@@ -47,11 +47,11 @@
   <h2>Gli insegnanti</h2>
   <div class="grid">
     <a class="card" href="shifu-luca-primavera.html">
-      <img src="assets/img/luca-staff.jpg" alt="Maestro Luca Primavera" style="aspect-ratio:16/10;object-fit:cover;object-position:top">
+      <img src="assets/img/luca-staff.jpg" alt="Maestro Luca Primavera" style="aspect-ratio:16/10;object-fit:cover;object-position:top" width="1419" height="1061" decoding="async" loading="lazy">
       <div class="card-body"><h3>Maestro Luca Primavera</h3><p>Shifu &ndash; Direttore Tecnico. Leggi il curriculum marziale &rarr;</p></div>
     </a>
     <a class="card" href="copia-di-shifu-luca-primavera.html">
-      <img src="assets/img/bufi-2.jpg" alt="Maestro Alessandro Bufi" style="aspect-ratio:16/10;object-fit:cover;object-position:top">
+      <img src="assets/img/optimized/bufi-2.webp" alt="Maestro Alessandro Bufi" style="aspect-ratio:16/10;object-fit:cover;object-position:top" width="1920" height="1080" decoding="async" loading="lazy">
       <div class="card-body"><h3>Maestro Alessandro Bufi</h3><p>Shifu &ndash; Responsabile organizzativo. Leggi il curriculum marziale &rarr;</p></div>
     </a>
   </div>
@@ -61,23 +61,23 @@
   <h2>I nostri allievi &ndash; aiuto ai corsi</h2>
   <div class="grid">
     <div class="card person">
-      <img src="assets/img/staff-1.png" alt="CN Giacomo Barbarossa">
+      <img src="assets/img/optimized/staff-1.webp" alt="CN Giacomo Barbarossa" width="1414" height="2000" decoding="async" loading="lazy">
       <div class="card-body"><h3>CN Giacomo Barbarossa</h3><p>Aiuto allenatore nel corso Sanda</p></div>
     </div>
     <div class="card person">
-      <img src="assets/img/staff-6.png" alt="Atleta Greta Frattaroli">
+      <img src="assets/img/optimized/staff-6.webp" alt="Atleta Greta Frattaroli" width="1414" height="2000" decoding="async" loading="lazy">
       <div class="card-body"><h3>Atleta Greta Frattaroli</h3><p>Aiuto allenatore nel corso Tradizionale e Kung Fu Kids</p></div>
     </div>
     <div class="card person">
-      <img src="assets/img/staff-5.png" alt="Atleta Gabriel Castiglione">
+      <img src="assets/img/optimized/staff-5.webp" alt="Atleta Gabriel Castiglione" width="1414" height="2000" decoding="async" loading="lazy">
       <div class="card-body"><h3>Atleta Gabriel Castiglione</h3><p>Aiuto allenatore nel corso Kung-Fu Tradizionale</p></div>
     </div>
     <div class="card person">
-      <img src="assets/img/staff-4.png" alt="Atleta Jacopo Digiovanni">
+      <img src="assets/img/optimized/staff-4.webp" alt="Atleta Jacopo Digiovanni" width="1414" height="2000" decoding="async" loading="lazy">
       <div class="card-body"><h3>Atleta Jacopo Digiovanni</h3><p>Aiuto allenatore nel corso Sanda</p></div>
     </div>
     <div class="card person">
-      <img src="assets/img/staff-7.png" alt="Atleta Valentina Lattanzi">
+      <img src="assets/img/optimized/staff-7.webp" alt="Atleta Valentina Lattanzi" width="1414" height="2000" decoding="async" loading="lazy">
       <div class="card-body"><h3>Atleta Valentina Lattanzi</h3><p>Aiuto allenatore nel corso Sanda</p></div>
     </div>
     <div class="card">
@@ -90,7 +90,7 @@
   <h2>I nostri allievi storici</h2>
   <div class="cols">
     <div>
-      <a href="cinture-nere.html"><figure class="framed"><img src="assets/img/staff-cinture-nere.jpg" alt="Le cinture nere della scuola"><figcaption>Clicca sulla foto per sapere chi sono</figcaption></figure></a>
+      <a href="cinture-nere.html"><figure class="framed"><img src="assets/img/optimized/staff-cinture-nere.webp" alt="Le cinture nere della scuola" width="3872" height="2592" decoding="async" loading="lazy"><figcaption>Clicca sulla foto per sapere chi sono</figcaption></figure></a>
     </div>
     <div>
       <p>Le cinture nere che condividono o hanno condiviso la storia dell&rsquo;accademia.</p>
