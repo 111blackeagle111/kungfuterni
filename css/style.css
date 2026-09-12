@@ -433,3 +433,15 @@ table td, table th { border: 1px solid #333; padding: .5rem .8rem; }
   .split > .testo { min-width: 0; padding: 2rem 1.25rem; }
   .contatti-grid .recapiti { min-width: 0; overflow-wrap: anywhere; }
 }
+
+/* Current lesson calendar: readable text alongside the original poster. */
+.lesson-calendar { margin: 1.5rem 0; table-layout: fixed; }
+.lesson-calendar caption { text-align: left; margin-bottom: .75rem; }
+.lesson-calendar th { text-align: left; }
+.lesson-calendar th:first-child { width: 42%; }
+.lesson-calendar td:last-child { white-space: nowrap; }
+@media (max-width: 600px) {
+  .lesson-calendar { font-size: .78rem; }
+  .lesson-calendar td, .lesson-calendar th { padding: .5rem .3rem; overflow-wrap: anywhere; }
+  .lesson-calendar th:first-child { width: 38%; }
+}
